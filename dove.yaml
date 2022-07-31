@@ -1,0 +1,48 @@
+schema version: 1.0
+
+pull_request:
+  default:
+    CI:
+      cmds:
+        - rez-test %DOVE_REPO_NAME%
+    CD:
+      cmds:
+        - rez-release --skip-repo-errors
+  feature:
+    CI:
+      cmds:
+        - rez-test %DOVE_REPO_NAME%
+    CD:
+      cmds:
+        - rez-release --skip-repo-errors
+
+  bugfix:
+    CI:
+      cmds:
+        - rez-test %DOVE_REPO_NAME%
+    CD:
+      cmds:
+        - rez-release --skip-repo-errors
+  improvement:
+    CI:
+      cmds:
+        - rez-test %DOVE_REPO_NAME%
+    CD:
+      cmds:
+        - rez-release --skip-repo-errors
+  hotfix:
+    CI:
+      cmds:
+        - rez-test %DOVE_REPO_NAME%
+    CD:
+      cmds:
+        - rez-release --skip-repo-errors
+
+release:
+  master:
+    CI:
+      cmds:
+        - rez-test %DOVE_REPO_NAME%
+    CD:
+      cmds:
+        - rez-release --skip-repo-errors
